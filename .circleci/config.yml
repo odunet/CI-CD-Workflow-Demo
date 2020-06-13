@@ -3,10 +3,14 @@ version: 2.1
 orbs:
   python: circleci/python@0.2.1
 
-jobs:
-    docker:
-      - image: circleci/python:3.8.0
+machine:
+  python:
+    version: 3.8.0
 
-    steps:
-      - checkout
-      - run: sumi.test.py
+dependencies:
+  override:
+    - pip install -r requirements.txt
+
+test:
+  override:
+    - sumi.test.py
