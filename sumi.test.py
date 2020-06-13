@@ -7,7 +7,7 @@ class SimpleTest(unittest.TestCase):
     def test(self):
         z,y = sumi.ave([4,5,6,7,8])
         print(z,y)
-        self.assertTrue(z,5)
+        self.assertTrue(z,7)
 
 if __name__ == '__main__':
     unittest.main()
